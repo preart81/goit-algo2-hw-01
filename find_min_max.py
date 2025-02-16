@@ -3,7 +3,7 @@ This module contains a function that finds the minimum and maximum values in a l
  """
 
 
-def find_min_max(arr: list) -> tuple:
+def find_min_max(arr) -> tuple:
     """
     This function finds the minimum and maximum values in a list.
 
@@ -13,6 +13,8 @@ def find_min_max(arr: list) -> tuple:
     Returns:
         A tuple containing the minimum and maximum values.
     """
+    if len(arr) == 0:
+        return None, None
     if len(arr) == 1:
         return arr[0], arr[0]
     if len(arr) == 2:
@@ -29,6 +31,7 @@ if __name__ == "__main__":
         [3, 5, 1, 2, 7, 8, 4, 6],
         [1, 2, 3, 4, -5, 6, 7, 8],
         [8.3, 7, 6, 5, 4, 3, 2, 1],
+        [],
     ]
 
     for arr in test_arrays:
